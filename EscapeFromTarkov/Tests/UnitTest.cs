@@ -45,9 +45,9 @@ public class Tests : BaseTest
         _driver.ElementClick(By.XPath("//a[contains(text(),'Рейтинг')]"));
         var js = (IJavaScriptExecutor)_driver;
         js.ExecuteScript("scrollBy(0, 400)");
-        Thread.Sleep(3000);
+        Thread.Sleep(3000);//dont know how to change without thread.sleep
         _driver.ElementClick(By.XPath("//*[@id='ratingFiltersForm']//div[@class='category switcher inlinetop']"));
-        Thread.Sleep(3000);
+        Thread.Sleep(3000);//help :c
         _driver.ElementClick(By.XPath("//*[contains(text(),'время в игре')]"));
         Assert.AreEqual(100, _driver.CountElements(By.XPath("//tbody/tr")));
         Thread.Sleep(3000);
