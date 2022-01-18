@@ -10,6 +10,7 @@ namespace EscapeFromTarkov.Tests;
 
 public class Tests : BaseTest
 {
+    [Parallelizable(ParallelScope.Self)]
     [Test]
     public void MediaPlayTest()
     {
@@ -24,6 +25,7 @@ public class Tests : BaseTest
         Assert.AreNotEqual("0:00", currentTime);
     }
 
+    [Parallelizable(ParallelScope.Self)]
     [Test]
     public void BookPriceTest()
     {
@@ -36,6 +38,7 @@ public class Tests : BaseTest
         Assert.AreEqual("260₽", bookPrice);
     }
 
+    [Parallelizable(ParallelScope.Self)]
     [Test]
     public void SortingRating()
     {
@@ -60,6 +63,7 @@ public class Tests : BaseTest
         Assert.IsTrue(validLevel);
     }
 
+    [Parallelizable(ParallelScope.Self)]
     [Test]
     public void ValidArticle()
     {
@@ -72,6 +76,7 @@ public class Tests : BaseTest
             _driver.ElementText(By.XPath("//*[contains(text(),'Error 208 - bad region')]")));
     }
 
+    [Parallelizable(ParallelScope.Self)]
     [Test]
     public void CartridgeSize()
     {
@@ -84,6 +89,7 @@ public class Tests : BaseTest
         Assert.AreEqual("5.45x39 мм", bulletSize);
     }
 
+    [Parallelizable(ParallelScope.Self)]
     [Test]
     public void OrderWithoutRegistration()
     {
