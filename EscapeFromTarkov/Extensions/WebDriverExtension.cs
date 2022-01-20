@@ -43,4 +43,8 @@ public static class WebDriverExtension
 
     public static void ElementClick(this IWebDriver driver, By by) =>
         GetElement(driver, by, TimeSpan.FromSeconds(15)).Click();
+
+    public static void ScrollElementToCenter(this IWebDriver driver, By by) =>
+        ((IJavaScriptExecutor) driver).ExecuteScript("arguments[0].scrollIntoView({inline:\"center\"});",
+            GetElement(driver, by));
 }
