@@ -29,6 +29,7 @@ public static class WebDriverExtension
     {
         var wait = new WebDriverWait(driver, timeout);
         wait.Until(ExpectedConditions.ElementToBeClickable(by));
+        wait.IgnoreExceptionTypes(new[] {typeof(StaleElementReferenceException),typeof(StaleElementReferenceException)});
         return wait.Until(d => d.FindElements(by));
     }
 
