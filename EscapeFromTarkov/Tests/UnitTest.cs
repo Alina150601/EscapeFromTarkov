@@ -1,11 +1,7 @@
-using System;
 using System.Linq;
-using System.Threading;
-using EscapeFromTarkov.Extensions;
 using EscapeFromTarkov.Pages;
 using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
+
 
 namespace EscapeFromTarkov.Tests;
 

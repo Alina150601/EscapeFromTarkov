@@ -6,6 +6,7 @@ namespace EscapeFromTarkov.Pages;
 public class MainPage
 {
     private IWebDriver _driver;
+    
 
     private By videoIcon = By.Id("banner_39_youtube");
     private By firstPlayButton = By.XPath("//*[@id='movie_player']/div[4]/button");
@@ -58,6 +59,7 @@ public class MainPage
 
     public void PreorderButtonClickOnMainMainPage()
     {
+        
         _driver.ElementClick(preorder);
     }
 }
