@@ -9,7 +9,7 @@ namespace EscapeFromTarkov.Tests
     [TestFixture]
     public class BaseTest
     {
-        protected const string _baseUrl = "https://www.escapefromtarkov.com";
+        protected const string _baseUrl = "https://www.escapefromtarkov.com/?lang=ru";
         protected IWebDriver _driver;
         protected WebDriverWait _wait;
 
