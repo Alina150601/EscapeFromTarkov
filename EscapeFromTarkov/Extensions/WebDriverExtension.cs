@@ -23,6 +23,7 @@ public static class WebDriverExtension
     {
         var wait = new WebDriverWait(driver, timeout);
         wait.Until(ExpectedConditions.ElementToBeClickable(by));
+        wait.IgnoreExceptionTypes(typeof(StaleElementReferenceException), typeof(StaleElementReferenceException));
         return wait.Until(d => d.FindElement(by));
     }
     public static ReadOnlyCollection<IWebElement> GetElements(this IWebDriver driver, By by, TimeSpan timeout)
