@@ -11,7 +11,6 @@ namespace EscapeFromTarkov.Tests;
 
 public class Tests : BaseTest
 {
-    [Parallelizable(ParallelScope.Self)]
     [Test]
     public void MediaPlayTest()
     {
@@ -19,11 +18,9 @@ public class Tests : BaseTest
         mainPage.VideoIconClick();
         _driver.SwitchTo().Frame("VideoPlayer_39");
         mainPage.FirstPlayButtonClick();
-        //mainPage.SecondPlayButtonClick();
         Assert.AreNotEqual("0:00", mainPage.textOfVideoCurrentTime);
     }
 
-    [Parallelizable(ParallelScope.Self)]
     [Test]
     public void BookPriceTest()
     {
@@ -34,8 +31,7 @@ public class Tests : BaseTest
         merchPage.BooksButtonClick();
         Assert.AreEqual("260₽", merchPage.BookPrice());
     }
-
-    [Parallelizable(ParallelScope.Self)]
+    
     [Test]
     public void SortingRating()
     {
@@ -50,7 +46,6 @@ public class Tests : BaseTest
         Assert.IsTrue(isLevelValid);
     }
 
-    [Parallelizable(ParallelScope.Self)]
     [Test]
     public void ValidArticle()
     {
@@ -62,7 +57,6 @@ public class Tests : BaseTest
         Assert.AreEqual("Error 208 - bad region", suppotPage.PageText());
     }
 
-    [Parallelizable(ParallelScope.Self)]
     [Test]
     public void CartridgeSize()
     {
@@ -75,7 +69,6 @@ public class Tests : BaseTest
         Assert.AreEqual("5.45x39 мм", wikiPage.GetBulletSize());
     }
 
-    [Parallelizable(ParallelScope.Self)]
     [Test]
     public void OrderWithoutRegistration()
     {
